@@ -1,0 +1,108 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include <math.h>
+/* #define N 3 */
+int N=3;
+
+
+void lu( double A[N][N])
+{
+  int i, j, k;
+
+  for (i = 0; i < N; i++)
+    {
+      for (j = 0; j <i; j++)
+        {
+          for (k = 0; k < j; k++)
+            {
+              A[i][j] -= A[i][k] * A[k][j];
+            }
+          A[i][j] /= A[j][j];
+        }
+      for (j = i; j < N; j++)
+        {
+          for (k = 0; k < i; k++)
+            {
+              A[i][j] -= A[i][k] * A[k][j];
+            }
+        }
+    }
+
+
+}
+
+
+int main(int argc, char** argv)
+{
+
+
+  double a[3][3] = { 5, 2, 1, 3, 9, 2, 2, 3, 12};
+  double l[3][3];
+  double u[3][3];
+  int i,j, debug = 0;
+
+
+  printf("The res A is \n");
+  for( i = 0; i < N; i++)
+    {
+      for( j = 0; j < N; j++)
+        {
+          printf(" %f ",a[i][j]);
+        }
+      printf("\n");
+    }
+
+  lu(a);
+
+  if (3.75 == 3.750000)
+    printf("\nYes\n");
+  else
+    printf("\nNo\n");
+ // lu_decomp(a,l,u);
+  //std::copy( res, res + 3, std::ostream_iterator<double>( std::cout, ","));
+
+  printf("The res LU is \n");
+  for( i = 0; i < N; i++)
+    {
+      for( j = 0; j < N; j++)
+        {
+          printf(" %f ",a[i][j]);
+        }
+      printf("\n");
+    }
+
+  printf("\n");
+
+if(debug)
+{
+
+
+  printf("The res L is \n");
+  for( i = 0; i < N; i++)
+    {
+      for( j = 0; j < N; j++)
+        {
+          printf(" %f ",l[i][j]);
+        }
+      printf("\n");
+    }
+
+  printf("\n");
+
+  printf("The res U is \n");
+  for( i = 0; i < N; i++)
+    {
+      for( j = 0; j < N; j++)
+        {
+          printf(" %f ",u[i][j]);
+        }
+      printf("\n");
+    }
+
+  printf("\n");
+
+}
+  printf("\n");
+
+}

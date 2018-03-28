@@ -1,0 +1,7 @@
+Time,In_Function,Block_Type,Block_No,Function_Name
+0.1707323500,main,FuncCall,0,init_array
+0.1706538520,init_array,For,4,
+0.1268231100,main,FuncCall,4,kernel_atax
+0.1267969000,kernel_atax,For,4,
+0.0000440610,init_array,For,0,
+0.0000175760,kernel_atax,For,0,

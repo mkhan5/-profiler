@@ -1,0 +1,9 @@
+Time,In_Function,Block_Type,Block_No,Function_Name
+0.2107533820,main,FuncCall,4,kernel_atax
+0.1808280340,main,FuncCall,0,init_array
+0.1805580550,init_array,For,4,
+0.0813515750,kernel_atax,FuncCall,8,cblas_dgemv
+0.0125196280,kernel_atax,FuncCall,12,cblas_dgemv
+0.0001084660,init_array,For,0,
+0.0000231690,kernel_atax,For,0,
+0.0000182860,kernel_atax,For,4,

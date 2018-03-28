@@ -1,0 +1,43 @@
+In_Function	Block_Type	Block_No	Speedup (if parallelized)	Coverage	Time	Function_Name
+	FuncDef		Nil	100	0.083202853	main
+main	FuncCall	0	1.7137453145	55.5310296872	0.046203401	init_array
+init_array	For	4	1.7121534978	55.4586956291	0.046143217	
+main	FuncCall	4	1.422055945	39.5723713945	0.032925342	kernel_atax
+kernel_atax	For	4	1.4216726981	39.5470958189	0.032904312	
+init_array	For	0	1.0002063035	0.0275014608	0.000022882	
+kernel_atax	For	0	1.0001014371	0.0135235747	0.000011252	
+						
+						
+						
+						
+						
+	In_Function	Block_No	Speedup (if parallelized)	Coverage	Time	Function_Name
+atax			-	100.00	0.08320285	main
+	init_array	4	1.71	55.46	0.04614322	
+	kernel_atax	4	1.42	39.55	0.03290431	
+	init_array	0	1.00	0.03	0.00002288	
+	kernel_atax	0	1.00	0.01	0.00001125	
+						
+bicg			-	100.00	0.09461115	main
+	init_array	4	1.74	56.67	0.05361487	
+	kernel_bicg	4	1.44	40.56	0.03837169	
+	init_array	0	1.00	0.05	0.00004953	
+	kernel_bicg	0	1.00	0.01	0.00001178	
+						
+gemm			-	100.00	7.25924866	main
+	kernel_gemm	0	3.92	99.31	7.20921818	
+	init_array	0	1.00	0.26	0.01852181	
+	init_array	4	1.00	0.20	0.01446096	
+	init_array	8	1.00	0.19	0.01410919	
+						
+syr2k			-	100.00	17.86048520	main
+	kernel_syr2k	0	3.97	99.75	17.81511442	
+	init_array	0	1.00	0.16	0.02857401	
+	init_array	4	1.00	0.08	0.01392111	
+						
+cholesky			-	100.00	83.91805775	main
+	init_array	8	3.30	92.98	78.02921866	
+	kernel_cholesky	0	1.05	6.94	5.82375567	
+	init_array	0	1.00	0.04	0.03000305	
+	init_array	4	1.00	0.02	0.01794518	
+	init_array	12	1.00	0.01	0.01249174	

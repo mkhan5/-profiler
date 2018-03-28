@@ -1,0 +1,4 @@
+25/05/2017 12:57:59 PM INFO: Starting Tulsi Filemanagement on source : linear-algebra/blas/gemver/gemver.c, platform : cublas
+25/05/2017 12:57:59 PM DEBUG: Compilation Successful!
+25/05/2017 12:57:59 PM DEBUG: Attempting code execution...
+25/05/2017 12:57:59 PM DEBUG: Done! Compilation and Execution of linear-algebra/blas/gemver/gemver_prof.c successful!
